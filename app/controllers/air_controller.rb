@@ -14,22 +14,8 @@ class AirController < ApplicationController
   end
 
   def scales
-    @fortune = "People close to you might be a bit worried about you, Libra. Too much work and socializing might have you feeling less than your usual self, and perhaps even a little feverish and headachy. If so, this is a good day to take time out, stay home, and rest. Don't worry about sabotaging your success. It will continue. 
+    @horoscope = "People close to you might be a bit worried about you, Libra. Too much work and socializing might have you feeling less than your usual self, and perhaps even a little feverish and headachy. If so, this is a good day to take time out, stay home, and rest. Don't worry about sabotaging your success. It will continue. 
     Take a break and your body will reward you with greater clarity and concentration."
-
-    array_of_numbers = Array.new
-
-    5.times do
-      another_number = rand(1...100)
-      
-      array_of_numbers.push(another_number)
-    end
-
-    render({ :template => "wind_html/libra.html.erb" })
-  end
-
-  def waterbearer
-    @horoscope = "Today may prove to be one of your busiest in a long time, Aquarius. The promise of continuing success in your personal and professional goals could find you spending a lot of time on the phone, writing emails, or making a few short trips around the community. You might not be able to reach everyone you need to see. Don't worry. Be persistent and you will reach them eventually."
 
     @array_of_numbers = Array.new
 
@@ -39,6 +25,8 @@ class AirController < ApplicationController
       @array_of_numbers.push(another_number)
     end
 
-    render({ :template => "flame_html/aquarius.html.erb" })
+    render({ :template => "wind_html/libra.html.erb" })
   end
+
+  
 end
